@@ -1,0 +1,8 @@
+SELECT DISTINCT pr.JNAME, pr.CITY
+FROM PROJECT pr,
+     PART p,
+     SUPPLY spj
+WHERE p.P# = spj.P#
+AND pr.j# = spj.J#
+AND p.COLOUR = 'RED'
+/

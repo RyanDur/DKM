@@ -1,0 +1,13 @@
+SELECT DISTINCT p.P#
+FROM PART p,
+     SUPPLIER s1,
+     SUPPLIER s2,
+     SUPPLY spj1,
+     SUPPLY spj2
+WHERE p.p# = spj1.P#
+AND p.p# = spj2.P#
+AND s1.S# = spj1.S#
+AND s2.S# = spj2.S#
+AND s1.CITY = 'ATHENS'
+AND s2.CITY = 'PARIS'
+/

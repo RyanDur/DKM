@@ -1,0 +1,8 @@
+SELECT DISTINCT s.SName
+FROM SUPPLIER s,
+     PART p,
+     SUPPLY spj
+WHERE s.S# = spj.S#
+  AND p.P# = spj.P#
+  AND p.colour = 'GREEN'
+/

@@ -1,0 +1,8 @@
+SELECT JNAME, CITY
+FROM PROJECT
+WHERE J# NOT IN (SELECT spj.J#
+      	     	 FROM SUPPlY spj,
+		      PART p
+		 WHERE spj.P# = p.P#
+		 AND p.COLOUR = 'RED')
+/

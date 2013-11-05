@@ -1,0 +1,7 @@
+SELECT SName
+FROM SUPPLIER
+WHERE S# NOT IN (SELECT spj.S#
+      	     	FROM PROJECT pr, SUPPLY spj
+		WHERE pr.J# = spj.J#
+		AND pr.CITY = 'PARIS')
+/
